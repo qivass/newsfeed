@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+	--color-primary: #262A2F;
+	--color-accent: #FF5533;
+	--color-gray: #868686;
+	--color-white: #FFFFFF;
+
+	--grid-colint-width: 6rem;
+	--grid-gap: 1.25rem;
+}
+
+* {
+	all: unset;
+	display: revert;
+}
+
+body {
+	font-family: 'Rubik', sans-serif;
+	background-color: #EBEBEB;
+	font-size: 1.375rem;
+	font-weight: 400;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, var(--grid-colint-width));
+	gap: var(--grid-gap);
+}
+
+.container {
+	max-width: 1366px;
+	margin: 0 auto;
+}
+
+.header {
+	margin: 28px auto 140px;
+}
+
+.header__logo {
+	grid-column: span 4;
+}
+
+.navigation__logo-link {
+	display: block;
+}
+
+.header__logo-link {
+	width: 433px;
+}
+
+.navigation__image {
+	width: 100%;
+}
+
+.navigation__list {
+	display: flex;
+	gap: 2.375rem;
+	list-style: none;
+}
+
+.header_navigation__list {
+	grid-column: 5/-1;
+}
+
+.header__navigation__link {
+	color: var(--color-primary);
+}
+
+.navigation__link {
+	font-size: 1.5rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.navigation__link--active {
+	color: var(--color-accent);
+}
+
+.navigation__link:hover {
+	color: var(--color-accent);
+}
+
+.main {
+	margin-bottom: 8.4375rem;
+}
+
+.articles__main {
+	grid-column: span 9;
+	display: grid;
+	grid-template: auto / auto;
+	gap: 3.375rem;
+}
+
+.articles__aside {
+	grid-column: 10/-1;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-auto-rows: minmax(min-content, max-content);
+	gap: 2.1875rem;
+}
+
+.main-article {
+	display: grid;
+	grid-template-columns: repeat(9, var(--grid-colint-width));
+	gap: var(--grid-gap);
+	box-sizing: border-box;
+}
+
+.main-article__image-container {
+	position: relative;
+	grid-column: span 3;
+	max-height: 328px;
+	min-height: 184px;
+	overflow: hidden;
+}
+
+.main-article__content {
+	grid-column: 4/-1;
+}
+
+.main-article__image {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.main-article__content {
+	padding-right: 3rem;
+}
+
+.article__category {
+	color: var(--color-accent);
+	font-size: 0.875rem;
+	font-weight: 700;
+	line-height: 1rem;
+	text-transform: uppercase;
+}
+
+.article__source {
+	color: var(--color-gray);
+	font-size: 1.25rem;
+	font-weight: 500;
+	line-height: 1.5rem;
+	text-transform: uppercase;
+}
+
+.article__date {
+	color: var(--color-accent);
+	font-size: 1.25rem;
+	font-weight: 500;
+	line-height: 1.875rem;
+	text-transform: uppercase;
+}
+
+.main-article__category {
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+.main-article__title {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	margin-bottom: 1.875rem;
+	font-size: 2.625rem;
+	font-weight: 700;
+	line-height: 3.125rem;
+}
+
+.main-article__text {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	margin-bottom: 1.5rem;
+	font-size: 1.375rem;
+	font-weight: 400;
+	line-height: 1.625rem;
+}
+
+.aside-article {
+	padding-left: 0.6875rem;
+	border-left: 0.5625rem solid var(--color-primary);
+}
+
+.aside-article__title {
+	margin-bottom: 0.875rem;
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: 1.5rem;
+}
+
+.aside-article__info {
+	display: inline-flex;
+	align-items: center;
+	gap: 14px;
+}
+
+.aside-article__date + .aside-article__source:before {
+	 display: inline-flex;
+	 padding-right: 0.625rem;
+	 content: '·'
+}
+
+.footer {
+	padding: 1.375rem 0 3.5rem;
+	background-color: var(--color-primary);
+}
+
+.footer_navigation {
+	align-items: center;
+	margin-bottom: 2.9375rem;
+}
+
+.footer_navigation__list {
+	grid-column: 3/-1;
+}
+
+.footer__logo {
+	grid-column: span 2;
+}
+
+.footer__logo-link {
+	width: 164px;
+}
+
+.footer__navigation__link {
+	color: var(--color-white);
+}
+
+.footer-info {
+	display: grid;
+	grid-template-columns: repeat(12, var(--grid-colint-width));
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer-info__text {
+	grid-column: span 5;
+	color: var(--color-white);
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 1.75rem;
+}
+
+.footer-info__link {
+	color: var(--color-accent);
+	cursor: pointer;
+}
+
+.footer-info__copyright {
+	grid-column: 12;
+	color: var(--color-gray);
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 1.75rem;
+}
