@@ -88,8 +88,8 @@ body {
 
 .articles__main {
 	grid-column: span 9;
-	display: grid;
-	grid-template: auto / auto;
+	display: flex;
+	flex-direction: column;
 	gap: 3.375rem;
 }
 
@@ -103,7 +103,7 @@ body {
 
 .main-article {
 	display: grid;
-	grid-template-columns: repeat(9, var(--grid-colint-width));
+	grid-template: min-content / repeat(9, var(--grid-colint-width));
 	gap: var(--grid-gap);
 	box-sizing: border-box;
 }
